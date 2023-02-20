@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Register</h1>
+    {% if errors %}
+      <div class="error">
+        {% for error in errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <form action="{{ url_for('register') }}" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="organization">Organization:</label>
+      <select id="organization" name="organization" required>
+        <option value="" selected disabled>Select an organization</option>
+        {% for organization in organizations %}
+          <option value="{{ organization }}">{{ organization }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+{% endblock %}

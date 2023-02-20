@@ -1,0 +1,16 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #current-time {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  #current-date {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  
